@@ -47,11 +47,11 @@ const ProductSlider = (props) => {
                 }
             },
             {
-                breakpoint: 767,
+                breakpoint: 991,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
-                    initialSlide: 2
+                    initialSlide: 1
                 }
             },
             {
