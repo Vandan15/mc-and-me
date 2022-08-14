@@ -1,0 +1,48 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-between {
+    @include flex-center();
+    justify-content: space-between;
+}
+
+
+@mixin flex-justify {
+    display: flex;
+    justify-content: center;
+}
+@mixin flex-center-column {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@mixin text-center {
+    text-align: center;
+}
+@mixin align-center {
+    align-items: center;
+}
+
+@mixin block {
+    display: block;
+}
+
+@mixin pointer {
+    cursor: pointer;
+}
+
+@mixin medium-border-radius {
+    border-radius: 3px;
+  }
+
+@mixin buttonthame {
+    background-color: map-get($colors, themecolor);
+    padding:  11px 34px;
+    border-radius: 18px;
+    border: none;
+    @include flex-center;
+    cursor: map-get($css-use , pointer);
+}  

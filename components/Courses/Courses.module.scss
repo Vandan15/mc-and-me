@@ -1,0 +1,113 @@
+@import "../../styles/mixins/global.scss";
+
+.Courses {
+  padding: map-get($size, md) * 8 0;
+
+  .headingnews {
+    @include text-center;
+    margin-bottom: map-get($size, md) * 4;
+
+    p {
+      @include text;
+      font-size: 22px;
+      color: map-get($colors, themecolor);
+      margin-bottom: map-get($size, md) * 0.3;
+    }
+
+    h4 {
+      @include heading-2;
+      @include breakpoint("max-sm") {
+        font-size: 32px;
+      }
+    }
+  }
+
+  .grid {
+    display: map-get($css-use, grid);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
+    @include breakpoint("max-lg") {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint("max-sm") {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .ImageBox {
+    background-color: map-get($colors, white);
+    border: 1px solid #f1f1f1;
+    box-shadow: 0px 0px 26px #6e6e6e29;
+    position: relative;
+    .imgdesign {
+      span {
+        height: 280px !important;
+      }
+    }
+    .pricebox {
+      background-color: map-get($colors, themecolor);
+      display: inline-block;
+      padding: map-get($size, md) * 0.5;
+      position: absolute;
+      top: map-get($size, md) * 0.7;
+      right: map-get($size, md) * 0.7;
+      span {
+        color: map-get($colors, white);
+        @include text;
+        display: block;
+        line-height: map-get($size, md) * 1.5;
+        padding: 0 7px;
+      }
+    }
+    .textboxdesign {
+      padding: map-get($size, md) * 1.8;
+      h5 {
+        @include text-md;
+        font-weight: map-get($weights, bold);
+      }
+      p {
+        @include text-sm;
+        color: map-get($colors, gray);
+        line-height: 20px;
+        margin-bottom: 0;
+      }
+    }
+    .buttonGropslider {
+      display: flex;
+      button {
+        width: 50%;
+        padding: 8px 0;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+          @include text;
+          color: #fff;
+        }
+        i {
+          margin-left: 15px;
+          color: #fff;
+        }
+        &:first-child {
+          background-color: map-get($colors, themecolor);
+        }
+        &:last-child {
+          background-color: map-get($colors, white);
+          border-bottom: 2px solid map-get($colors, white);
+          span {
+            color: map-get($colors, themecolor);
+          }
+          i {
+            color: map-get($colors, themecolor);
+          }
+          &:hover {
+            border-bottom: 2px solid map-get($colors, themecolor);
+          }
+        }
+      }
+    }
+  }
+}

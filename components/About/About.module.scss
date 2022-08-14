@@ -1,0 +1,94 @@
+@import '../../styles/mixins/global.scss';
+
+.About{
+    .abouboxgrid{
+       display: map-get($css-use , grid);
+       grid-template-columns: repeat(2, 1FR);
+       margin-bottom: map-get($size , md) * 8;
+       @include align-center;
+       @include breakpoint ("max-lg"){
+        grid-template-columns: repeat(1, 1fr);
+        margin-bottom: 0;
+        &:last-child{
+            margin-bottom: map-get($size , md) * 8;
+        }
+    }
+       span{
+        height: 100% !important;
+       }
+       img{
+        width: 100% !important;
+        display: block !important;
+        max-height: 600px !important;
+        height: 100% !important;
+        @include breakpoint("max-lg"){
+            max-height: 100% !important; 
+        }
+       }
+       .aboutthemecolor{
+
+        background-color: map-get($colors , themecolor);
+        height: 100%;
+        .innerTextbox{
+
+            max-width: map-get($size , xl) * 25;
+            @include flex-center-column;
+            height: 100%;
+            margin: auto;
+            
+            @include breakpoint("max-lg"){
+               max-width: 100%;
+               padding: map-get($size , md ) * 3;  
+            }
+            @include breakpoint("max-sm"){
+                padding: map-get($size , md ) * 2;  
+             }
+
+            h4{
+                @include heading-2;
+                font-size: map-get($size, xl ) * 1.5 ;
+                @include text-center;
+                color: map-get($colors , white);
+                @include breakpoint ("max-lg"){
+                    font-size: map-get($size, xl ) * 1.1 ;
+                }
+                @include breakpoint ("max-sm"){
+                    @include text-md;
+                    font-weight: 600;
+                }
+            }
+            .righttextbox{
+                margin-top: map-get($size , md) * 4;
+                @include breakpoint ("max-sm"){
+                    margin-top: map-get($size , md) * 2;
+                }
+                .textgrid{
+                    display: map-get($css-use , grid);
+                    grid-template-columns: 25px auto;
+                    gap: map-get($size , md) * 2.5;
+                    margin-bottom: map-get($size , md ) * 2;
+                    svg{
+                        width: map-get($size , md) * 2.5;
+                    }
+                    p{
+                        @include text;
+                        color: map-get($colors , white );
+                    }
+                }
+                
+            }
+        }
+       }
+    }
+
+    .abouboxgrid{
+        &:nth-child(2){
+            @include breakpoint ("max-lg"){
+                .aboutthemecolor{
+                  order: 2;
+                }
+            }
+        }
+    }
+    
+}

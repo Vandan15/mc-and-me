@@ -1,0 +1,55 @@
+$colors:(
+    themecolor:#FF7F50 , 
+    light-blue:#25B0C4 ,
+    black:#000000 ,
+    gray:#606060 ,
+    darkgray:#2A2A2A,
+    light-gray:#5A596B,
+    gray-2:#333333, 
+    gray-3:#343434, 
+    white:#fff,
+    light-backrgound:#eff8ff
+);
+
+@function color-show($color-name) {
+    @return map-get($colors , $color-name);
+}
+
+$weights:(
+    regular:400, 
+    mediua:500,
+    bold:600
+);
+
+@function weight-show($weights-number) {
+    @return map-get($weights , $weights-number);
+} 
+
+$size:(
+    sm:5px,
+    md:10px,
+    lg:15px,
+    xl:20px
+);
+
+@function size-show($size-counter) {
+    @return map-get($size , $size-counter);
+};
+
+$css-use:(
+    flex:flex,
+    grid:grid,
+    relative:relative,
+    absolute:absolute,
+    pointer:pointer,
+    center:center ,
+    hidden:hidden, 
+    wfull:100%, 
+    fixed:fixed,
+);
+
+@function css-style($css-type) {
+    @return map-get($css-use , $css-type);
+}
+
+

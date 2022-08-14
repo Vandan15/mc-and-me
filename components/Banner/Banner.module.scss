@@ -1,0 +1,7 @@
+@import '../../styles/mixins/global.scss';
+
+.bannerMain{
+    background-image: url(../../public/assets/bgbanner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

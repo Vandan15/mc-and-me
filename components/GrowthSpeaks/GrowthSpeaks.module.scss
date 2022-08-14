@@ -1,0 +1,27 @@
+@import '../../styles/mixins/global.scss';
+
+.GrowthSpeaks{
+   .grid{
+       display: map-get($css-use, grid );
+       grid-template-columns: repeat(2 , 1fr);
+       gap: 30px;
+       @include breakpoint ("max-md"){
+        grid-template-columns: repeat(1 , 1fr);
+       }
+       .subgrid{
+           
+           .textbox{
+               h3{
+                   @include heading-3;
+               }
+               p{
+                   @include text;
+                   line-height: 22px;
+                   letter-spacing: 1px;
+                   padding-top: map-get($size, md ) * 3;
+                   color: map-get($colors, gray );
+               }
+           }
+       }
+   }
+}

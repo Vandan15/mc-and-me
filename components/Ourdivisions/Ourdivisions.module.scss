@@ -1,0 +1,57 @@
+@import '../../styles/mixins/global.scss';
+
+.Ourdivisionsbg{
+    background-color: map-get($colors , themecolor);
+    padding: map-get($size , xl) * 2 0;
+    .heading{
+        @include text-center;
+        h3{
+            @include heading-2;
+            color: map-get($colors , white);
+            margin-bottom: map-get($size , xl) * 3;
+            @include breakpoint ("max-sm"){
+                font-size: 32px;
+                margin-bottom: map-get($size , xl) * 2;
+            }
+            
+        }
+    }
+    .grid{
+        display: map-get($css-use ,grid);
+        grid-template-columns: repeat(3,1fr);
+        gap: 70px;
+        @include breakpoint ("max-lg"){
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+        @include breakpoint ("max-sm"){
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+        }
+        .subgrid{
+            .boxbg{
+                background-color: map-get($colors, white);
+                padding: map-get($size , md) * 2.5;
+                border-radius: 25px;
+                @include text-center;
+                cursor: pointer;
+                svg{
+                    width: 80px;
+                    height: 95px;
+                    margin: map-get($size , md) * 3 0;
+                }
+                h4{
+                    @include text-md;
+                    font-weight: map-get($weights , bold );
+                    color: map-get($colors , gray-3);
+                    margin-bottom: 14px;
+                }
+                p{
+                    @include text;
+                    line-height: 26px;
+                    color: map-get($colors , gray-3);
+                }
+            }
+        }
+    }
+}

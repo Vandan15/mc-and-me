@@ -1,0 +1,89 @@
+@import '../../styles/mixins/global.scss';
+
+.News{
+  padding-bottom: map-get($size , md) * 8;
+  .headingnews{
+    @include text-center;
+    margin-bottom: map-get($size, md) * 4;
+    p{
+        @include text;
+        font-size: 22px;
+        color: map-get($colors , themecolor);
+        margin-bottom: map-get($size, md ) * .3  ;
+    }
+    h4{
+        @include heading-2;
+        @include breakpoint ("max-sm"){
+          font-size: 32px;
+        }
+    }
+  }
+  .grid{
+    display: map-get($css-use , grid );
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 30px;
+    @include breakpoint ("max-lg"){
+      grid-template-columns: repeat(2 , 1fr);
+    }
+    @include breakpoint ("max-sm"){
+      grid-template-columns: repeat(1 , 1fr);
+    }
+    .cartbg{
+      border: 1px solid #F1F1F1;
+      background-color: map-get($colors, white );
+      box-shadow: 0px 0px 26px #6E6E6E29;
+      height: 100%;
+      span{
+        width: 100% !important;
+        img{
+          height: map-get($size , md) * 29 !important;
+          object-fit: cover;
+        }
+      }
+      
+      .carttext{
+       padding: map-get($size , md) * 2;
+       h5{
+        @include text-md;
+        font-weight: map-get($weights, bold );
+        margin-bottom: map-get($size , md) * 1;
+       }
+       p{
+        @include text;
+        font-size: 18px;
+        color: map-get($colors , gray-3 );
+       }
+      }
+    }
+  }
+  .buttonGrop{
+    @include flex-center;
+    justify-content: center;
+    margin-top: map-get($size , md) * 5;
+    button{
+      @include buttonthame;
+      border: 1px solid map-get($colors, white);
+      &:hover {
+        background-color: map-get($colors, white);
+        border: 1px solid map-get($colors, themecolor);
+        background-color: transparent;
+        span {
+          color: map-get($colors, themecolor );
+        }
+        i {
+          color: map-get($colors, themecolor );
+        }
+      }
+      span{
+        @include text;
+        font-size: map-get($size , md ) * 1.8;
+        color: map-get($colors, white );
+      }
+      i{
+        color: map-get($colors, white );
+        margin-left: map-get($size , md) * 1;
+        font-size: map-get($size , md ) * 2.6;
+      }
+    }
+  }
+}

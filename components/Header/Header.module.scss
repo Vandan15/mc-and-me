@@ -1,0 +1,138 @@
+@import "../../styles/mixins/global.scss";
+
+.header {
+   padding: map-get($size, md) * 1 0;
+   padding-top: map-get($size, md) * 3;
+   .grid {
+      display: map-get($css-use, grid);
+      grid-template-columns: 240px auto;
+      gap: 20px;
+      align-items: center;
+      @include breakpoint("max-lg") {
+         grid-template-columns: 140px auto;
+      }
+      .subgrid {
+         .menuline {
+            @include flex-between;
+            align-items: center;
+            ul {
+               margin: 0;
+               padding: 0;
+            }
+            @include breakpoint("max-md") {
+               display: none;
+            }
+            ul {
+               li {
+                  display: inline-block;
+                  a {
+                     @include text;
+                     padding: 18px 20px;
+                     font-weight: map-get($weights, mediua);
+                     &:hover {
+                        color: map-get($colors, themecolor);
+                     }
+                     @include breakpoint("max-lg") {
+                        padding: 18px 8px;
+                     }
+                  }
+               }
+            }
+            .buttonheader {
+               @include flex-center;
+               button {
+                  @include buttonthame;
+                  color: map-get($colors, themecolor);
+                  padding: 4px 28px;
+                  background-color: transparent;
+                  border: 1px solid map-get($colors, themecolor);
+                  &:hover {
+                     background-color: map-get($colors, themecolor);
+                     color: map-get($colors, white);
+                  }
+                  &:last-child {
+                     background-color: map-get($colors, themecolor);
+                     color: map-get($colors, white);
+                     margin-left: map-get($size, md) * 1.2;
+                     &:hover {
+                        background-color: map-get($colors, white);
+                        color: map-get($colors, themecolor);
+                        background-color: transparent;
+                     }
+                  }
+               }
+            }
+         }
+         .barIcon {
+            display: none;
+            @include breakpoint("max-md") {
+               display: block;
+               @include flex-between;
+               justify-content: end;
+               i {
+                  font-size: 30px;
+               }
+            }
+         }
+      }
+   }
+   .phonemenu {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 280px;
+      overflow-y: auto;
+      background-color: #fff;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      z-index: 99;
+      .innermenu {
+         .headerDesign {
+            padding: 30px 20px 30px;
+            @include flex-between;
+            width: 100%;
+            border-bottom: 1px solid #b1b1b1;
+            transition: 0.7s;
+            i {
+               font-size: 24px;
+               color: #b6b6b6;
+            }
+         }
+         .phonemenuline {
+            ul {
+               padding-top: map-get($size, md) * 2 !important;
+               li {
+                  padding: 7px 14px;
+                  a {
+                     @include text;
+                     padding: 18px 20px;
+                     font-weight: map-get($weights, mediua);
+                     &:hover {
+                        color: map-get($colors, themecolor);
+                     }
+                     @include breakpoint("max-lg") {
+                        padding: 18px 8px;
+                     }
+                  }
+               }
+            }
+            .buttonheader {
+               @include flex-center;
+               justify-content: center;
+               button {
+                  @include buttonthame;
+                  color: map-get($colors, themecolor);
+                  padding: 4px 28px;
+                  background-color: transparent;
+                  border: 1px solid map-get($colors, themecolor);
+                  &:last-child {
+                     background-color: map-get($colors, themecolor);
+                     color: map-get($colors, white);
+                     margin-left: map-get($size, md) * 1.2;
+                  }
+               }
+            }
+         }
+      }
+   }
+}

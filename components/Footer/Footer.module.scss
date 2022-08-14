@@ -1,0 +1,77 @@
+@import '../../styles/mixins/global.scss';
+
+.footerbg{
+  
+    background-color: map-get($colors, darkgray );
+    padding: map-get($size, xl) * 4 0 ;
+    .grid{
+        display: map-get($css-use ,grid);
+        grid-template-columns: repeat(3, 1fr);
+        gap: 60px;
+        @include breakpoint("max-lg"){
+            grid-template-columns: repeat(2,1fr);
+            gap: 40px;
+        }
+        @include breakpoint("max-sm"){
+            grid-template-columns: repeat(1,1fr);
+            gap: 30px;
+        }
+        .subgrid{
+            p{
+                @include text;
+                color: map-get($colors, white );
+                opacity: .7;
+                line-height: 28px;
+                padding-top: map-get($size, md ) * 1.5;
+            }
+            .iconfooter{
+                @include flex-center;
+                padding: 0;
+                margin-top: map-get($size, xl) * 1 ;
+                
+                li{
+                   margin-right: map-get($size, xl) * 1 ;
+                    a{
+                        @include text-center;
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        display: block;
+                        border: 1px solid hsla(0, 0%, 100%, 0.815);
+                        color: map-get($colors,white);
+                        padding-top: 5px;
+                        &:hover{
+                            color: map-get($colors , themecolor);
+                            border-color: map-get($colors , themecolor);
+                        }
+                    }
+                }
+            }
+            h4{
+                @include  text-md;
+                color: map-get($colors , themecolor);
+                margin-bottom: map-get($size , md) * 2;
+                
+            }
+            .onebox{
+                @include flex-between;
+                align-items: baseline;
+                ul{
+                    li{
+                        a{
+                            @include text;
+                            color: map-get($colors, white);
+                            margin-bottom: map-get($size , md) * 1.5;
+                            @include block;
+                            &:hover{
+                                color: map-get($colors , themecolor);
+                                text-decoration: underline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
+}
