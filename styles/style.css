@@ -101,14 +101,22 @@ ul{
 }
 @media only screen and (max-width: 1440px){
   .bannermains .carousel-control-prev{
-    left: 45%;
-    top: 100%;
+    left: 0%;
+    top: 50%;
     transform: translateX(-40px);
   }
   .bannermains .carousel-control-next{
-    right: 45%;
-    top: 100%;
+    right: 0%;
+    top: 50%;
     transform: translateX(40px);
+  }
+}
+@media only screen and (max-width: 991px){
+  .bannermains .carousel-control-prev{
+    display: none !important;
+  }
+  .bannermains .carousel-control-next{
+    display: none !important;
   }
 }
 
