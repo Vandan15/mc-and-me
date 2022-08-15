@@ -25,11 +25,11 @@ export default function Home() {
       {/* <Banner/> */}
       {/* <Slider/> */}
       <BrowseCourses/>
-      <BanneGrowthSpeaks/>
       <Courses/>
+      <BanneGrowthSpeaks/>
+      <Ourdivisions/>
       <About/>
       <News/>
-      <Ourdivisions/>
       <Meetus/>
       <Footer/>
     </div>

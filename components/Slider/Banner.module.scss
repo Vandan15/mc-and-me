@@ -30,6 +30,7 @@
                     letter-spacing: 1px;
                     color: map-get($colors , themecolor);
                     line-height: 45px;
+                    font-family: 'Playfair Display';
                     @include breakpoint ("max-md") {
                         font-size: map-get($size, md ) * 2.7;
                        line-height: map-get($size, md ) * 3.2;
@@ -40,6 +41,7 @@
                     @include heading-3;
                     font-size: 38px;
                     margin: map-get($size, md) * 1.5 0;
+                    font-family: 'Playfair Display';
 
                     @include breakpoint ("max-md") {
                         font-size: map-get($size, md ) * 2.7;
@@ -48,11 +50,12 @@
 
                 p {
                     @include text-md;
-                    font-size: 26px;
+                    font-size: 20px;
                     color: map-get($colors, gray);
+                    font-family: 'Montserrat';
 
                     @include breakpoint ("max-md") {
-                        font-size: 22px
+                        font-size: 16px
                     }
                 }
 

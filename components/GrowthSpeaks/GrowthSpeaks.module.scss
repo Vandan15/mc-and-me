@@ -1,6 +1,7 @@
 @import '../../styles/mixins/global.scss';
 
 .GrowthSpeaks{
+    padding: map-get($size, md) * 8 0;
    .grid{
        display: map-get($css-use, grid );
        grid-template-columns: repeat(2 , 1fr);
@@ -13,11 +14,13 @@
            .textbox{
                h3{
                    @include heading-3;
+                   font-family: 'Playfait Display';
+                   font-size: 36px;
                }
                p{
                    @include text;
                    line-height: 22px;
-                   letter-spacing: 1px;
+                //    letter-spacing: 1px;
                    padding-top: map-get($size, md ) * 3;
                    color: map-get($colors, gray );
                }

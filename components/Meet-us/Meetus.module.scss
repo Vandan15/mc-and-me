@@ -1,38 +1,38 @@
-@import '../../styles/mixins/global.scss';
-
+@import "../../styles/mixins/global.scss";
 
 .Meetusmain {
-  padding: map-get($size , md) * 8 0;
+  padding: map-get($size, md) * 8 0;
   .Meetus {
-    background-color: map-get($colors , themecolor);
-    padding: map-get($size , md) * 4;
+    background-color: map-get($colors, themecolor);
+    padding: map-get($size, md) * 4;
     border-radius: map-get($size, md) * 3;
     @include flex-center;
     justify-content: center;
     z-index: 99;
     position: relative;
-    @include breakpoint ("max-sm"){
-      padding: map-get($size , md) * 2;
+    @include breakpoint("max-sm") {
+      padding: map-get($size, md) * 2;
     }
     .innerbox {
       @include text-center;
-      max-width: map-get($size , xl) * 32;
+      max-width: map-get($size, xl) * 32;
       z-index: 99;
-    position: relative;
+      position: relative;
       h3 {
         @include heading-2;
-        color: map-get($colors , white);
-        margin-bottom: map-get($size , xl) * 1;
+        font-family: 'Playfair Display';
+        color: map-get($colors, white);
+        margin-bottom: map-get($size, xl) * 1;
 
-        @include breakpoint ("max-sm") {
+        @include breakpoint("max-sm") {
           @include heading-3;
-          margin-bottom: map-get($size , xl) * 1;
+          margin-bottom: map-get($size, xl) * 1;
         }
       }
 
       p {
         @include text;
-        font-size: 18px;
+        font-size: 14px;
         color: map-get($colors, white);
         margin-bottom: map-get($size, md) * 1.5;
       }
@@ -40,50 +40,48 @@
       .buttongrop {
         @include flex-center;
         justify-content: center;
-          margin-top: map-get($size , md) * 3;
+        margin-top: map-get($size, md) * 3;
         button {
           @include buttonthame;
           background-color: map-get($colors, darkgray);
 
           span {
             @include text;
-            font-size: map-get($size , md) * 1.8;
+            font-size: map-get($size, md) * 1.8;
             color: map-get($colors, white);
           }
 
           i {
             color: map-get($colors, white);
-            margin-left: map-get($size , md) * 1;
-            font-size: map-get($size , md) * 2.6;
+            margin-left: map-get($size, md) * 1;
+            font-size: map-get($size, md) * 2.6;
           }
         }
       }
     }
-    
   }
-  .imgpostion{
+  .imgpostion {
     position: static;
     z-index: 10;
-    @include breakpoint ("max-sm"){
+    @include breakpoint("max-sm") {
       display: none;
     }
-    span{
-      position: map-get($css-use , absolute) !important;
-        width: map-get($size, md ) * 18 !important;
-        height: map-get($size, md ) * 8.3 !important;
-        right: 40px;
-        top: 40px;
-        img{
-          object-fit: contain;
-        }
+    span {
+      position: map-get($css-use, absolute) !important;
+      width: map-get($size, md) * 18 !important;
+      height: map-get($size, md) * 8.3 !important;
+      right: 40px;
+      top: 40px;
+      img {
+        object-fit: contain;
+      }
     }
-    .imgtow{
-      span{
+    .imgtow {
+      span {
         top: unset;
         bottom: 40px;
         left: 40px;
       }
     }
-   
   }
 }

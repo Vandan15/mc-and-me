@@ -25,6 +25,11 @@
         h5{
           @include heading-3;
           margin-bottom: map-get($size, md ) * 1.5;
+          font-family: 'Playfair Display';
+          font-size: 36px;
+        }
+        p {
+          font-family: 'Montserrat';
         }
       }
     }
@@ -54,6 +59,12 @@
               box-shadow: 0px 8px 6px #00000029;
               p{
                 @include text;
+                font-family: 'Montserrat';
+                font-size: 14px;
+                &:first-child {
+                  font-family: 'Playfair Display';
+                  font-size: 22px;
+                }
                 color: map-get($colors, white );
               }
             }

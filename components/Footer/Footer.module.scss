@@ -23,6 +23,7 @@
                 opacity: .7;
                 line-height: 28px;
                 padding-top: map-get($size, md ) * 1.5;
+                font-size: 14px
             }
             .iconfooter{
                 @include flex-center;
@@ -40,6 +41,7 @@
                         border: 1px solid hsla(0, 0%, 100%, 0.815);
                         color: map-get($colors,white);
                         padding-top: 5px;
+                        cursor: pointer;
                         &:hover{
                             color: map-get($colors , themecolor);
                             border-color: map-get($colors , themecolor);
@@ -51,6 +53,7 @@
                 @include  text-md;
                 color: map-get($colors , themecolor);
                 margin-bottom: map-get($size , md) * 2;
+                font-size: 16px
                 
             }
             .onebox{
@@ -63,9 +66,11 @@
                             color: map-get($colors, white);
                             margin-bottom: map-get($size , md) * 1.5;
                             @include block;
+                            font-size: 14px;
+                            cursor: pointer;
                             &:hover{
                                 color: map-get($colors , themecolor);
-                                text-decoration: underline;
+                                // text-decoration: underline;
                             }
                         }
                     }

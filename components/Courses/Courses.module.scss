@@ -1,7 +1,7 @@
 @import "../../styles/mixins/global.scss";
 
 .Courses {
-  padding: map-get($size, md) * 8 0;
+  padding: map-get($size, sm) * 8 0;
 
   .headingnews {
     @include text-center;
@@ -16,6 +16,7 @@
 
     h4 {
       @include heading-2;
+      font-family: 'Playfair Display';
       @include breakpoint("max-sm") {
         font-size: 32px;
       }
@@ -39,8 +40,11 @@
   .ImageBox {
     background-color: map-get($colors, white);
     border: 1px solid #f1f1f1;
-    box-shadow: 0px 0px 26px #6e6e6e29;
+    // box-shadow: 0px 0px 26px #6e6e6e29;
+    // box-shadow: 0px 0px 26px rgb(110 110 110 / 16%);
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
     position: relative;
+    padding: 5px;
     .imgdesign {
       span {
         height: 280px !important;
@@ -51,8 +55,8 @@
       display: inline-block;
       padding: map-get($size, md) * 0.5;
       position: absolute;
-      top: map-get($size, md) * 0.7;
-      right: map-get($size, md) * 0.7;
+      top: map-get($size, md) * 1.5;
+      right: map-get($size, md) * 1.5;
       span {
         color: map-get($colors, white);
         @include text;
@@ -62,16 +66,18 @@
       }
     }
     .textboxdesign {
-      padding: map-get($size, md) * 1.8;
+      padding: map-get($size, md) * 0.7;
       h5 {
         @include text-md;
         font-weight: map-get($weights, bold);
+        font-family: 'Playfair Display'
       }
       p {
         @include text-sm;
         color: map-get($colors, gray);
         line-height: 20px;
         margin-bottom: 0;
+        letter-spacing: unset;
       }
     }
     .buttonGropslider {
@@ -93,6 +99,7 @@
         }
         &:first-child {
           background-color: map-get($colors, themecolor);
+          text-transform: uppercase;
         }
         &:last-child {
           background-color: map-get($colors, white);

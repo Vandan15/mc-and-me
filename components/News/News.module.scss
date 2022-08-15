@@ -13,6 +13,7 @@
     }
     h4{
         @include heading-2;
+        font-family: "Playfair Display";
         @include breakpoint ("max-sm"){
           font-size: 32px;
         }
@@ -47,11 +48,12 @@
         @include text-md;
         font-weight: map-get($weights, bold );
         margin-bottom: map-get($size , md) * 1;
+        font-family: "Playfair Display";
        }
        p{
         @include text;
-        font-size: 18px;
-        color: map-get($colors , gray-3 );
+        font-size: 14px;
+        color: map-get($colors , gray);
        }
       }
     }

@@ -69,7 +69,13 @@ ul{
   top: 50%;
   border-radius: 50%;
 }
-
+.slick-dots {
+  display: none !important;
+}
+.slick-track .slick-slide{
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
 /* .bannermains .carousel-control-prev{
   width: auto;
   left: -100px;

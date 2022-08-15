@@ -28,6 +28,8 @@
                   a {
                      @include text;
                      padding: 18px 20px;
+                     font-size: 15px;
+                     cursor: pointer;
                      font-weight: map-get($weights, mediua);
                      &:hover {
                         color: map-get($colors, themecolor);
@@ -42,6 +44,7 @@
                @include flex-center;
                button {
                   @include buttonthame;
+                  font-family: 'Montserrat';
                   color: map-get($colors, themecolor);
                   padding: 4px 28px;
                   background-color: transparent;
