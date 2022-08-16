@@ -1,75 +1,186 @@
 @import "../styles/mixins/global.scss";
 
-.aboutmain{
-
+.aboutmain {
     .header {
         padding-top: 0;
     }
-    .titlebg{
-        background-color: map-get($colors , themecolor );
-        padding: map-get($size, md ) * 3;
+    .titlebg {
+        background-color: map-get($colors, themecolor);
+        padding: map-get($size, md) * 3;
         text-align: center;
-        h4{
-           @include heading-3;
-           color: map-get($colors, white );
-           font-weight: map-get($weights, regular );
-           letter-spacing: 2px;
+        h4 {
+            @include heading-3;
+            color: map-get($colors, white);
+            font-weight: map-get($weights, regular);
+            letter-spacing: 2px;
         }
     }
-    .bannerbg{
+    .bannerbg {
         background-image: url(../public/assets/student-banner.jpg);
         background-size: cover;
-        padding: map-get($size, xl ) * 6 0;
+        padding: map-get($size, xl) * 6 0;
         background-position: center;
         position: relative;
         text-align: center;
-        &::before{
-            content: '';
+        &::before {
+            content: "";
             position: absolute;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             background-color: rgba($color: #000000, $alpha: 0.6);
-            
         }
-        .textabout{
+        .textabout {
             z-index: 99;
             position: relative;
-            max-width: map-get($size, xl )  *  28;
+            max-width: map-get($size, xl) * 28;
             margin: auto;
-            h5{
+            h5 {
                 @include heading-3;
-                color: map-get($colors, white );
-                font-weight: map-get($weights, regular );
-                letter-spacing: 2px
+                color: map-get($colors, white);
+                font-weight: map-get($weights, regular);
+                letter-spacing: 2px;
             }
-            h4{
+            h4 {
                 @include heading-2;
-                color: map-get($colors, white );
+                color: map-get($colors, white);
                 font-size: 32px;
-               margin-top: map-get($size, md  ) * 2;
+                margin-top: map-get($size, md) * 2;
             }
         }
     }
-    .aboutboximg{
-        padding: map-get($size, md ) * 8;
-        .grid{
+    .aboutboximg {
+        padding: map-get($size, md) * 8;
+        .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            .subgrid{
-                .Firstimg{
-                    span{
+            .subgrid {
+                .Firstimg {
+                    span {
                         height: 510px !important;
                         object-fit: cover;
                         display: block !important;
                     }
                 }
-                .secoundimg{
-                    span{
+                .secoundimg {
+                    span {
                         height: 255px !important ;
                         display: block !important;
                     }
+                }
+            }
+        }
+    }
+    .teamWrapper {
+        margin-bottom: 50px;
+        .header {
+            font: normal normal bold 32px/64px Playfair Display;
+            color: #fff;
+            background-color: #000000;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .teamMember {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .cardWrapper {
+                box-shadow: 5px 5px 5px #e7e7e7;
+                width: 33%;
+                padding: 15px;
+                margin-bottom: 25px;
+                background-color: #fff;
+                border-radius: 5px;
+                @media (max-width: 991px) {
+                    width: 49%;
+                }
+                @media (max-width: 476px) {
+                    width: 100%;
+                }
+                h4 {
+                    font: normal normal bold 22px/16px Playfair Display;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font: normal normal normal 14px/22px Montserrat;
+                    margin-bottom: 30px !important;
+                }
+            }
+        }
+        .teamValue {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            .cardWrapper {
+                box-shadow: 5px 10px 11px #00000029;
+                width: 33.33%;
+                padding: 15px;
+                margin-bottom: 15px;
+                @media (max-width: 991px) {
+                    width: 50%;
+                }
+                @media (max-width: 476px) {
+                    width: 100%;
+                }
+                h4 {
+                    font: normal normal bold 22px/16px Playfair Display;
+                    margin-bottom: 15px;
+                }
+                p {
+                    font: normal normal normal 14px/22px Montserrat;
+                    margin-bottom: 30px !important;
+                }
+            }
+        }
+    }
+    .teamValue {
+        margin-bottom: 50px;
+        .header {
+            font: normal normal bold 32px/64px Playfair Display;
+            color: #fff;
+            background-color: #000000;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .teamMember {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            .cardWrapper {
+                box-shadow: 5px 5px 5px #e7e7e7;
+                width: 49%;
+                padding: 15px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                background-color: #fff;
+                border-radius: 5px;
+                @media (max-width: 767px) {
+                    width: 100%;
+                }
+                h4 {
+                    font: normal normal bold 22px/16px Playfair Display;
+                    margin-bottom: 20px;
+                    @media (max-width: 767px) {
+                        font-size: 18px;
+                    }
+                }
+                p {
+                    font: normal normal normal 14px/22px Montserrat;
+                    margin-bottom: 30px !important;
+                }
+                .contentWrap {
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 15px;
+                    padding-top: 15px;
                 }
             }
         }
