@@ -2,7 +2,7 @@
 
 .header {
    padding: map-get($size, md) * 1 0;
-   padding-top: map-get($size, md) * 3;
+   // padding-top: map-get($size, md) * 3;
    .grid {
       display: map-get($css-use, grid);
       grid-template-columns: 240px auto;

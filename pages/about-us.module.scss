@@ -1,0 +1,77 @@
+@import "../styles/mixins/global.scss";
+
+.aboutmain{
+
+    .header {
+        padding-top: 0;
+    }
+    .titlebg{
+        background-color: map-get($colors , themecolor );
+        padding: map-get($size, md ) * 3;
+        text-align: center;
+        h4{
+           @include heading-3;
+           color: map-get($colors, white );
+           font-weight: map-get($weights, regular );
+           letter-spacing: 2px;
+        }
+    }
+    .bannerbg{
+        background-image: url(../public/assets/student-banner.jpg);
+        background-size: cover;
+        padding: map-get($size, xl ) * 6 0;
+        background-position: center;
+        position: relative;
+        text-align: center;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #000000, $alpha: 0.6);
+            
+        }
+        .textabout{
+            z-index: 99;
+            position: relative;
+            max-width: map-get($size, xl )  *  28;
+            margin: auto;
+            h5{
+                @include heading-3;
+                color: map-get($colors, white );
+                font-weight: map-get($weights, regular );
+                letter-spacing: 2px
+            }
+            h4{
+                @include heading-2;
+                color: map-get($colors, white );
+                font-size: 32px;
+               margin-top: map-get($size, md  ) * 2;
+            }
+        }
+    }
+    .aboutboximg{
+        padding: map-get($size, md ) * 8;
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            .subgrid{
+                .Firstimg{
+                    span{
+                        height: 510px !important;
+                        object-fit: cover;
+                        display: block !important;
+                    }
+                }
+                .secoundimg{
+                    span{
+                        height: 255px !important ;
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+}
