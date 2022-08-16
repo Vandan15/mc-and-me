@@ -36,37 +36,59 @@
             position: relative;
             max-width: map-get($size, xl) * 28;
             margin: auto;
+            @include breakpoint ("max-sm"){
+                max-width: map-get($size, xl) * 15;
+            }
             h5 {
                 @include heading-3;
                 color: map-get($colors, white);
                 font-weight: map-get($weights, regular);
                 letter-spacing: 2px;
+                @include breakpoint ("max-sm"){
+                    font-size: 24px
+                }
             }
             h4 {
                 @include heading-2;
                 color: map-get($colors, white);
                 font-size: 32px;
                 margin-top: map-get($size, md) * 2;
+                @include breakpoint ("max-sm"){
+                    font-size: 24px
+                }
             }
         }
     }
     .aboutboximg {
-        padding: map-get($size, md) * 8;
+        padding: map-get($size, md) * 8 0;
+        @include breakpoint ("max-msm"){
+            padding: map-get($size, md) * 4 0;
+         }
         .grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            @include breakpoint ("max-msm"){
+                grid-template-columns: repeat(1, 1fr);
+            }
             .subgrid {
                 .Firstimg {
                     span {
                         height: 510px !important;
                         object-fit: cover;
                         display: block !important;
+                        @include breakpoint ("max-msm"){
+                           height: 390px !important;
+                        }
                     }
                 }
                 .secoundimg {
+                    
                     span {
                         height: 255px !important ;
                         display: block !important;
+                        @include breakpoint ("max-msm"){
+                            height: 390px !important;
+                         }
                     }
                 }
             }
@@ -181,6 +203,81 @@
                     flex-direction: column;
                     padding-left: 15px;
                     padding-top: 15px;
+                }
+            }
+        }
+    }
+
+
+    .storyImage{
+        .secoundstorybox{
+           .storybox{
+               .boximagedesign{
+                    margin-left: auto;
+               }
+               .boxstorybg{
+                right: unset;
+                left: 0;
+               }
+           } 
+        }
+        .storybox{
+            position: relative;
+            margin-bottom: map-get($size, md ) * 8;
+            @include breakpoint ("max-md"){
+                    
+                margin-bottom: map-get($size, md ) * 4;
+             }
+            .boximagedesign{
+                background-image: url(../public/assets/Image1.png);
+                padding: 70px 0;
+                height: 490px;
+                background-repeat: no-repeat;
+                width: 800px;
+                object-fit: cover;
+                @include breakpoint ("max-md"){
+                   width: 100%;
+                   height: 390px;
+                }
+               
+            }
+            .boxstorybg{
+                width: 650px;
+                background-color: map-get($colors, white );
+                padding: 30px 30px;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                box-shadow: 0px 10px 6px #00000029;
+                transform: translateY(-50%);
+                min-height: 280px;
+                @include breakpoint ("max-md"){
+                    
+                    position: unset;
+                    transform: unset;
+                    width: 100%;
+                    padding: 20px;
+                  
+                 }
+                h4{
+                    @include heading-3;
+                   color: map-get($colors, #000 );
+                    text-align: center;
+                    margin-bottom: map-get($size, md ) * 1.4;
+                    span{
+                        color: map-get($colors, themecolor );
+                    }
+                    @include breakpoint ("max-md"){
+                       font-size: 24px
+                     }
+                }
+                p{
+                    @include text;
+                    font-size: 16px;
+                    color: #000;
+                    @include breakpoint ("max-md"){
+                       font-size: 14px;
+                      }
                 }
             }
         }
